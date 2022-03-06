@@ -35,5 +35,5 @@ jobs:
 
     - run: |-
         gcloud components install beta 
-        gcloud beta workflows deploy ${{ github.event.pull_request.user.login }}-BG --location us-central1 --source .github/workflows/cloudwf.yaml
+        gcloud beta workflows deploy ${{ github.event.pull_request.user.login }}-BG --location us-central1 --source .github/workflows/workflows.yaml
         gcloud workflows execute ${{ github.event.pull_request.user.login }}-BG --data='{"machinetype":"e2-small","instance":"${{ github.event.pull_request.user.login }}-instance","project":"${{ secrets.PROJECT_ID }}","zone":"us-central1-a"}'
