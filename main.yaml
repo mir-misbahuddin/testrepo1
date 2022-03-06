@@ -1,7 +1,7 @@
 # Name of Action
 name: 'Workflows'
 
-# Controls when the action will get triggered 
+# Controls when action will get triggered 
 on:
   pull_request:
     types: [closed]
