@@ -8,6 +8,8 @@ main:
         - zone: ${args.zone}
         - machineType: ${args.machinetype}
         - instanceName: ${args.instance}
+        
+ # create vm
 
     - create_machine:
         call: googleapis.compute.v1.instances.insert
